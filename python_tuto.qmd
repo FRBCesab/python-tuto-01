@@ -1,0 +1,41 @@
+---
+title: "Python tutorial"
+format: 
+  revealjs:
+  #logo: img/cesab-logo.png
+    theme: moon
+    smaller: true
+    
+---
+
+## Setup
+
+Setting up a local python environment is a pain...
+
+
+![Source:](img/py_nightmare.png){fig-align="centre" height="50%"}
+
+
+## Setup
+
+Online options:
+
+- **Jupyter notebooks:** easiest is to download the Anaconda Navigator (comes with a lot of heavy software you probably won't use)
+
+- **google colab :** (+) has google installed libraries and GPU power (limited to xxx GO). (-) to make one you need a google account, but you can also just follow mine:
+
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
