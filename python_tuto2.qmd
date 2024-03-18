@@ -1,11 +1,10 @@
 ---
-title: "Python tutorial"
+title: "Trial2"
 format: 
   revealjs:
-  #logo: img/cesab-logo.png
     theme: moon
     smaller: true
-jupyter: python3    
+jupyter: python3
 ---
 
 ## Setup
@@ -119,8 +118,24 @@ age = "How old are you ?"
 
 if int(age) > limit:
   print("Wow, you're a living fossil !")
-else
+else:
   print("Oh yeah, you're alright.")
-
+  
 ```
+
+
+
+## Take home :
+
+- indents !
+
+- ":" after ifs and elses, rather than brackets like in R
+
+- code execution by individual cells (on Colab/Jupyter) or entire script (Spyder, etc).
+
+- python errors are usually quite precise: **read the error messages carefully**. Otherwise, absolute rule is: the internet has looooaaads of python forums, help pages, tutorials, bug fixes. A very active community.
+
+
+
+
 
