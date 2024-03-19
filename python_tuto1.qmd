@@ -1,0 +1,195 @@
+---
+title: "A soft intro to Python (part I)"
+format: 
+  revealjs:
+    theme: dark
+    smaller: true
+jupyter: python3
+---
+
+## Setup
+
+::: r-fit-text
+Setting up a local python environment is a pain...
+
+![Source: http://xkcd.com/1987](img/py_nightmare.png){fig-align="centre" height="50%"}
+:::
+
+## Setup
+
+Easiest way : install Anaconda Navigator...
+
+Editors: - IDLE = default - Anaconda \> Spyder, PyCharm, ... and RStudio too! File \> New file \> Python script
+
+![Python prompt: \>\>\>](img/py_in_RStudio.png){height="50%"}
+
+## Setup
+
+Online options:
+
+-   **Jupyter notebooks:** open from Anaconda
+
+-   **google colab :** (+) has google installed libraries and GPU/TPU power (limited GO). (-) to make one you need a google account
+
+## Basics
+
+Same programming rules:
+
+-   named variables:
+
+`>>> a=50` - use `+=` to increment/concatenate
+
+`>>> a += a + 1`
+
+-   a list = multiple values in a variable. Each value is identified by its **key** (name).
+
+`>>> mylist = ['tic', 'tac', 'toc']`
+
+-   in Python, index starts at 0, not 1 (so NOT like in R): in mylist, the key for value toto is 0.
+
+`>>> print(mylist[2])`
+
+## Basics
+
+::: {style="font-size: 75%;"}
+A common object to manipulate in Python are **dictionaries**: they're a pair of KEY:Value just like in lists, but here keys in dictionaries aren't ordered. Use `{}` to initiate them (but still use `[]` to manipulate them).
+
+`>>> mydico = {}` or
+
+`>>> mydico = dict(Lastname = "Petit", Firstname = "Cathleen", Pronounciation = "Kétline")`
+
+Same conditional rules as in R: if, else, elsif... --\> NO !! it's **elif** (but who uses those..?!)
+
+**Arithmetic operators :** the usual, but also: `%`, which means 'modulo', is a multiple of. Returns 1 or 0 (True/False).
+
+**Logical operators :** `==, !=, >, >=, ...`
+
+
+### For loops:
+
+Synthax:
+:::
+
+::: {style="font-size: 100%;"}
+``` python
+string = 'Hello sunshine !'
+for a in string :
+  print (a)
+```
+
+Try it !
+:::
+
+## A few commun built-in functions:
+
+::: {style="font-size: 55%;"}
+`random(list)` → choose random element of a list
+
+`len(list)` → number of elements in list
+
+`max / min(list)`
+
+`str.split(separator)` → transform str into list according to separator
+
+`list.append(value)` → add a value to list (like c() in R)
+
+`del list[key]`, **NOT the same as** `list.remove(value)`
+
+`list.count(value)` → counts number of occurrences of that value in the list
+
+`list[-1]` → shows the last value of the list
+
+`list[a:b]` → show values from a to b
+
+`x.extend(y`)\` → concatenate lists x and y
+
+`str.find(string)` → counts occurrences of str in string
+
+`str.replace(where, what)`
+
+`input(string)` → prints string and asks user for feedback (VERY INTERESTING)
+
+`range(int)` → useful in for loops: for i in range(1, 10):
+:::
+
+## Libraries
+
+Just like in R: built-in functions, but also packages of functions, called libraries.
+
+Use `import library` to load them. Colab has many pre-installed libraries, but sometimes you need to activate them at the beginning of your session with `!pip install library` or `pip install library` or `pip3 install library` if you're using a local environment.
+
+### Common libraries:
+
+-   math, random, numpy, ...
+
+-   scikit-learn, pytorch, SciPy, TensorFlow, Keras....: `import sklearn as skl` → data science.
+
+-   matplotlib : data viz. You can also choose to only import a function instead of the whole library: `import matplotlib.pyplot as plt`
+
+-   pandas : Python's tidyverse ;) Handles dataframes.
+
+## Your turn !!
+
+-   play around with the different functions
+
+### Exercise:
+
+Write a script to ask the user their age, and give different answers depending on whether you think it's old or young.
+
+## Answer:
+
+``` python
+limit = 99
+
+age = input("How old are you ?")
+
+if int(age) > limit:
+  print("Wow, you're a living fossil !")
+else:
+  print("Oh yeah, you're alright.")
+```
+
+## Take home :
+
+-   indents !
+
+-   ":" after ifs and elses, rather than brackets like in R
+
+-   code execution by individual cells (on Colab/Jupyter) or entire script (Spyder, etc).
+
+-   python errors are usually quite precise: **read the error messages carefully**. Otherwise, absolute rule is: the internet has looooaaads of python forums, help pages, tutorials, bug fixes. A very active community.
+
+## Homework :)
+
+Generate a list of integers, and then show:
+
+- the list
+
+- the list in column format, displaying matching keys and values
+
+- the sum of all elements of the list
+
+- create a new list made of 5 multiples of the original list
+
+- give min and max values of the list
+
+- count occurrences of pair and odd numbers and sum them
+
+
+## Quick games
+
+Write a program to...
+
+- throw a dice
+
+- throw 2 dice
+
+- Rock paper cisors
+
+- guess a number between 1 and 1000 by indicating when the value is higher or lower
+
+- hangman (without the graphical aspect)
+
+
+
+

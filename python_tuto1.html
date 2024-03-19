@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="python_tuto2_files/libs/clipboard/clipboard.min.js"></script>
-<script src="python_tuto2_files/libs/quarto-html/tabby.min.js"></script>
-<script src="python_tuto2_files/libs/quarto-html/popper.min.js"></script>
-<script src="python_tuto2_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="python_tuto2_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="python_tuto2_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="python_tuto2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="python_tuto2_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="python_tuto1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="python_tuto1_files/libs/quarto-html/tabby.min.js"></script>
+<script src="python_tuto1_files/libs/quarto-html/popper.min.js"></script>
+<script src="python_tuto1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="python_tuto1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="python_tuto1_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="python_tuto1_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="python_tuto1_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.551">
 
-  <title>A soft intro to Python (part II)</title>
+  <title>A soft intro to Python (part I)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="python_tuto2_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="python_tuto2_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="python_tuto1_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="python_tuto1_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -94,11 +94,11 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="python_tuto2_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="python_tuto2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="python_tuto2_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="python_tuto2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="python_tuto2_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="python_tuto1_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="python_tuto1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="python_tuto1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="python_tuto1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="python_tuto1_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -390,121 +390,160 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">A soft intro to Python (part II)</h1>
+  <h1 class="title">A soft intro to Python (part I)</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="homework-answers" class="slide level2">
-<h2>Homework answers</h2>
-<div id="7dd1526a" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="co"># I didn't specify anything, so this is valid:</span></span>
-<span id="cb1-2"><a href=""></a>mylist <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">11</span>, <span class="dv">20</span>))</span>
-<span id="cb1-3"><a href=""></a></span>
-<span id="cb1-4"><a href=""></a><span class="co"># show list</span></span>
-<span id="cb1-5"><a href=""></a>mylist</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>[11, 12, 13, 14, 15, 16, 17, 18, 19]</code></pre>
-</div>
-</div>
-<div id="d5acd3c5" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="co"># But you *could* use the random library:</span></span>
-<span id="cb3-2"><a href=""></a><span class="im">import</span> random</span>
-<span id="cb3-3"><a href=""></a>randlist <span class="op">=</span> random.sample(<span class="bu">range</span>(<span class="dv">11</span>, <span class="dv">50</span>), <span class="dv">9</span>)</span>
-<span id="cb3-4"><a href=""></a></span>
-<span id="cb3-5"><a href=""></a><span class="co"># show list</span></span>
-<span id="cb3-6"><a href=""></a>randlist</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>[12, 15, 41, 47, 31, 32, 20, 27, 19]</code></pre>
-</div>
-</div>
-<div id="73bb765d" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="co"># the list displaying matching keys and values</span></span>
-<span id="cb5-2"><a href=""></a>length <span class="op">=</span> <span class="bu">len</span>(randlist)</span>
-<span id="cb5-3"><a href=""></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(length):</span>
-<span id="cb5-4"><a href=""></a>  <span class="bu">print</span>(i, <span class="st">":"</span>, randlist[i])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>0 : 12
-1 : 15
-2 : 41
-3 : 47
-4 : 31
-5 : 32
-6 : 20
-7 : 27
-8 : 19</code></pre>
+<section id="setup" class="slide level2">
+<h2>Setup</h2>
+<div class="r-fit-text">
+<p>Setting up a local python environment is a pain…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/py_nightmare.png" style="height:50.0%"></p>
+<figcaption>Source: http://xkcd.com/1987</figcaption>
+</figure>
 </div>
 </div>
 </section>
-<section id="homework-answers-1" class="slide level2">
-<h2>Homework answers</h2>
-<ul>
-<li>Sum of all elements of the list</li>
-</ul>
-<div id="d8ff9cc0" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a>sumlist <span class="op">=</span> <span class="bu">sum</span>(randlist)</span>
-<span id="cb7-2"><a href=""></a><span class="bu">print</span>(<span class="st">"The sum of all elements = "</span>, sumlist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>The sum of all elements =  244</code></pre>
-</div>
-</div>
-<ul>
-<li>Min and max values of the list</li>
-</ul>
-<div id="0e4c7b7a" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a><span class="bu">print</span>(<span class="st">"max randlist = "</span>, <span class="bu">max</span>(randlist), <span class="st">"; min randlist = "</span>, <span class="bu">min</span>(randlist))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>max randlist =  47 ; min randlist =  12</code></pre>
-</div>
-</div>
-<ul>
-<li>Create a new list made of 5 multiples of the original list</li>
-</ul>
-<div id="204bc60f" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href=""></a>listx5 <span class="op">=</span> []</span>
-<span id="cb11-2"><a href=""></a></span>
-<span id="cb11-3"><a href=""></a><span class="cf">for</span> i <span class="kw">in</span> randlist:</span>
-<span id="cb11-4"><a href=""></a>  listx5.append(i<span class="op">*</span><span class="dv">5</span>)</span>
-<span id="cb11-5"><a href=""></a><span class="bu">print</span>(<span class="st">"multiples list : "</span>, listx5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>multiples list :  [60, 75, 205, 235, 155, 160, 100, 135, 95]</code></pre>
-</div>
+<section id="setup-1" class="slide level2">
+<h2>Setup</h2>
+<p>Easiest way : install Anaconda Navigator…</p>
+<p>Editors: - IDLE = default - Anaconda &gt; Spyder, PyCharm, … and RStudio too! File &gt; New file &gt; Python script</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/py_in_RStudio.png" style="height:50.0%"></p>
+<figcaption>Python prompt: &gt;&gt;&gt;</figcaption>
+</figure>
 </div>
 </section>
-<section id="homework-answers-2" class="slide level2">
-<h2>Homework answers</h2>
+<section id="setup-2" class="slide level2">
+<h2>Setup</h2>
+<p>Online options:</p>
 <ul>
-<li>Count pair values</li>
-</ul>
-<div id="4e469921" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href=""></a>npairs <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb13-2"><a href=""></a>nodd <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb13-3"><a href=""></a><span class="cf">for</span> i <span class="kw">in</span> randlist:</span>
-<span id="cb13-4"><a href=""></a>  <span class="cf">if</span> i<span class="op">%</span><span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb13-5"><a href=""></a>    npairs <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb13-6"><a href=""></a>  <span class="cf">else</span>:</span>
-<span id="cb13-7"><a href=""></a>    nodd <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb13-8"><a href=""></a><span class="bu">print</span>(<span class="st">"randlist has "</span>, npairs, <span class="st">"pair numbers and "</span>, nodd, <span class="st">"odd numbers."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>randlist has  6 pair numbers and  3 odd numbers.</code></pre>
-</div>
-</div>
-</section>
-<section id="functions" class="slide level2">
-<h2>Functions</h2>
-</section>
-<section id="errors-and-exceptions" class="slide level2">
-<h2>Errors and exceptions</h2>
-</section>
-<section id="importing-data" class="slide level2">
-<h2>Importing data</h2>
-<ul>
-<li>From local computer onto colab</li>
+<li><p><strong>Jupyter notebooks:</strong> open from Anaconda</p></li>
+<li><p><strong>google colab :</strong> (+) has google installed libraries and GPU/TPU power (limited GO). (-) to make one you need a google account</p></li>
 </ul>
 </section>
-<section id="pandas-matplotlib" class="slide level2">
-<h2>Pandas, matplotlib</h2>
+<section id="basics" class="slide level2">
+<h2>Basics</h2>
+<p>Same programming rules:</p>
+<ul>
+<li>named variables:</li>
+</ul>
+<p><code>&gt;&gt;&gt; a=50</code> - use <code>+=</code> to increment/concatenate</p>
+<p><code>&gt;&gt;&gt; a += a + 1</code></p>
+<ul>
+<li>a list = multiple values in a variable. Each value is identified by its <strong>key</strong> (name).</li>
+</ul>
+<p><code>&gt;&gt;&gt; mylist = ['tic', 'tac', 'toc']</code></p>
+<ul>
+<li>in Python, index starts at 0, not 1 (so NOT like in R): in mylist, the key for value toto is 0.</li>
+</ul>
+<p><code>&gt;&gt;&gt; print(mylist[2])</code></p>
+</section>
+<section id="basics-1" class="slide level2">
+<h2>Basics</h2>
+<div style="font-size: 75%;">
+<p>A common object to manipulate in Python are <strong>dictionaries</strong>: they’re a pair of KEY:Value just like in lists, but here keys in dictionaries aren’t ordered. Use <code>{}</code> to initiate them (but still use <code>[]</code> to manipulate them).</p>
+<p><code>&gt;&gt;&gt; mydico = {}</code> or</p>
+<p><code>&gt;&gt;&gt; mydico = dict(Lastname = "Petit", Firstname = "Cathleen", Pronounciation = "Kétline")</code></p>
+<p>Same conditional rules as in R: if, else, elsif… –&gt; NO !! it’s <strong>elif</strong> (but who uses those..?!)</p>
+<p><strong>Arithmetic operators :</strong> the usual, but also: <code>%</code>, which means ‘modulo’, is a multiple of. Returns 1 or 0 (True/False).</p>
+<p><strong>Logical operators :</strong> <code>==, !=, &gt;, &gt;=, ...</code></p>
+<h3 id="for-loops">For loops:</h3>
+<p>Synthax:</p>
+</div>
+<div style="font-size: 100%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a>string <span class="op">=</span> <span class="st">'Hello sunshine !'</span></span>
+<span id="cb1-2"><a href=""></a><span class="cf">for</span> a <span class="kw">in</span> string :</span>
+<span id="cb1-3"><a href=""></a>  <span class="bu">print</span> (a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Try it !</p>
+</div>
+</section>
+<section id="a-few-commun-built-in-functions" class="slide level2">
+<h2>A few commun built-in functions:</h2>
+<div style="font-size: 55%;">
+<p><code>random(list)</code> → choose random element of a list</p>
+<p><code>len(list)</code> → number of elements in list</p>
+<p><code>max / min(list)</code></p>
+<p><code>str.split(separator)</code> → transform str into list according to separator</p>
+<p><code>list.append(value)</code> → add a value to list (like c() in R)</p>
+<p><code>del list[key]</code>, <strong>NOT the same as</strong> <code>list.remove(value)</code></p>
+<p><code>list.count(value)</code> → counts number of occurrences of that value in the list</p>
+<p><code>list[-1]</code> → shows the last value of the list</p>
+<p><code>list[a:b]</code> → show values from a to b</p>
+<p><code>x.extend(y</code>)` → concatenate lists x and y</p>
+<p><code>str.find(string)</code> → counts occurrences of str in string</p>
+<p><code>str.replace(where, what)</code></p>
+<p><code>input(string)</code> → prints string and asks user for feedback (VERY INTERESTING)</p>
+<p><code>range(int)</code> → useful in for loops: for i in range(1, 10):</p>
+</div>
+</section>
+<section id="libraries" class="slide level2">
+<h2>Libraries</h2>
+<p>Just like in R: built-in functions, but also packages of functions, called libraries.</p>
+<p>Use <code>import library</code> to load them. Colab has many pre-installed libraries, but sometimes you need to activate them at the beginning of your session with <code>!pip install library</code> or <code>pip install library</code> or <code>pip3 install library</code> if you’re using a local environment.</p>
+<h3 id="common-libraries">Common libraries:</h3>
+<ul>
+<li><p>math, random, numpy, …</p></li>
+<li><p>scikit-learn, pytorch, SciPy, TensorFlow, Keras….: <code>import sklearn as skl</code> → data science.</p></li>
+<li><p>matplotlib : data viz.&nbsp;You can also choose to only import a function instead of the whole library: <code>import matplotlib.pyplot as plt</code></p></li>
+<li><p>pandas : Python’s tidyverse ;) Handles dataframes.</p></li>
+</ul>
+</section>
+<section id="your-turn" class="slide level2">
+<h2>Your turn !!</h2>
+<ul>
+<li>play around with the different functions</li>
+</ul>
+<h3 id="exercise">Exercise:</h3>
+<p>Write a script to ask the user their age, and give different answers depending on whether you think it’s old or young.</p>
+</section>
+<section id="answer" class="slide level2">
+<h2>Answer:</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>limit <span class="op">=</span> <span class="dv">99</span></span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a>age <span class="op">=</span> <span class="bu">input</span>(<span class="st">"How old are you ?"</span>)</span>
+<span id="cb2-4"><a href=""></a></span>
+<span id="cb2-5"><a href=""></a><span class="cf">if</span> <span class="bu">int</span>(age) <span class="op">&gt;</span> limit:</span>
+<span id="cb2-6"><a href=""></a>  <span class="bu">print</span>(<span class="st">"Wow, you're a living fossil !"</span>)</span>
+<span id="cb2-7"><a href=""></a><span class="cf">else</span>:</span>
+<span id="cb2-8"><a href=""></a>  <span class="bu">print</span>(<span class="st">"Oh yeah, you're alright."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="take-home" class="slide level2">
+<h2>Take home :</h2>
+<ul>
+<li><p>indents !</p></li>
+<li><p>“:” after ifs and elses, rather than brackets like in R</p></li>
+<li><p>code execution by individual cells (on Colab/Jupyter) or entire script (Spyder, etc).</p></li>
+<li><p>python errors are usually quite precise: <strong>read the error messages carefully</strong>. Otherwise, absolute rule is: the internet has looooaaads of python forums, help pages, tutorials, bug fixes. A very active community.</p></li>
+</ul>
+</section>
+<section id="homework" class="slide level2">
+<h2>Homework :)</h2>
+<p>Generate a list of integers, and then show:</p>
+<ul>
+<li><p>the list</p></li>
+<li><p>the list in column format, displaying matching keys and values</p></li>
+<li><p>the sum of all elements of the list</p></li>
+<li><p>create a new list made of 5 multiples of the original list</p></li>
+<li><p>give min and max values of the list</p></li>
+<li><p>count occurrences of pair numbers and sum them</p></li>
+</ul>
+</section>
+<section id="quick-games" class="slide level2">
+<h2>Quick games</h2>
+<p>Write a program to…</p>
+<ul>
+<li><p>throw a dice</p></li>
+<li><p>throw 2 dice</p></li>
+<li><p>Rock paper cisors</p></li>
+<li><p>guess a number between 1 and 1000 by indicating when the value is higher or lower</p></li>
+<li><p>hangman (without the graphical aspect)</p></li>
+</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
@@ -515,19 +554,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="python_tuto2_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="python_tuto1_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="python_tuto2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="python_tuto2_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="python_tuto2_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="python_tuto2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="python_tuto2_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="python_tuto1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="python_tuto1_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="python_tuto1_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="python_tuto1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="python_tuto1_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="python_tuto2_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="python_tuto2_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="python_tuto2_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="python_tuto2_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="python_tuto1_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="python_tuto1_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="python_tuto1_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="python_tuto1_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

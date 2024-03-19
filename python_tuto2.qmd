@@ -1,141 +1,95 @@
 ---
-title: "Trial2"
+title: "A soft intro to Python (part II)"
 format: 
   revealjs:
-    theme: moon
+    theme: dark
     smaller: true
 jupyter: python3
 ---
 
-## Setup
+## Homework answers
 
-Setting up a local python environment is a pain...
+```{python}
+#| echo: true
+# I didn't specify anything, so this is valid:
+mylist = list(range(11, 20))
 
-
-![Source: http://xkcd.com/1987](img/py_nightmare.png){fig-align="centre" height="50%"}
-
-
-## Setup
-
-Easiest way : install Anaconda Navigator...
-
-Editors: 
-- IDLE = default
-- Anaconda > Spyder, PyCharm, ... and RStudio too! File > New file > Python script
+# show list
+mylist
+```
 
 
-![Python prompt: >>> ](img/py_in_RStudio.png){ height="50%"}
+```{python}
+#| echo: true
+# But you *could* use the random library:
+import random
+randlist = random.sample(range(11, 50), 9)
 
-## Setup
+# show list
+randlist
+```
 
-Online options:
+```{python}
+#| echo: true
+# the list displaying matching keys and values
+length = len(randlist)
+for i in range(length):
+  print(i, ":", randlist[i])
+```
+## Homework answers
 
-- **Jupyter notebooks:** open from Anaconda
+- Sum of all elements of the list
 
-- **google colab :** (+) has google installed libraries and GPU/TPU power (limited GO). (-) to make one you need a google account
+```{python}
+#| echo: true
+sumlist = sum(randlist)
+print("The sum of all elements = ", sumlist)
+```
 
+- Min and max values of the list
 
+```{python}
+#| echo: true
+print("max randlist = ", max(randlist), "; min randlist = ", min(randlist))
+```
 
-## Basics
+- Create a new list made of 5 multiples of the original list
+```{python}
+#| echo: true
+listx5 = []
 
-Same programming rules: 
-
-- named variables: 
-
-`>>> a=50`
-- use `+=` to increment/concatenate
-
-`>>> a += a + 1`
-
-- a list = multiple values in a variable. Each value is identified by its **key** (name). 
-
-`>>> mylist = ['tic', 'tac', 'toc']`
-
-- in Python, index starts at 0, not 1 (so NOT like in R): in mylist, the key for value toto is 0.  
-
-`>>> print(mylist[2])`
-
-
-## Basics
-
-A common object to manipulate in Python are **dictionaries**: they're a pair of KEY:Value just like in lists, but here  keys in dictionaries aren't ordered. Use `{}` to initiate them (but still use `[]` to manipulate them).
-
-`>>> mydico = {}` or 
-
-`>>> mydico = dict(Lastname = "Petit", Firstname = "Cathleen", Pronounciation = "Kétline")`
-
-
-Same conditional rules as in R: if, else, elsif --> NO !! it's **elif** (but who uses those..?!)
-
-Otherwise same logical operators : `==, !=, >, >=, ... `
-
-Another charming specificity is that **indentation matters** and will throw errors if ignored.
-
-
-
-
-## A few commun built-in functions:
-
-random(list) → choose random element of a list
-
-len(list) → number of elements in list
-
-max / min(list) 
-
-str.split(separator) → transform str into list according to separator
-
-list.append(value) → add a value to list (like c() in R)
-
-list[key] = calls value associated to key
-
-del list[key]
-
-list.remove(value)
-
-list.count(value) → counts number of occurrences of that value in the list
-
-list[-1] → shows the last value of the list
-
-list [a:b] → show values from a to b
-
-x.extend(y) → concatenate lists x and y
-
-lists of lists....
-
-
-## Your turn !!
-
-Write a script to ask the user their age, and give different answers depending on whether you think it's old or young.
-
-
-## Answer:
-
-```python
-
-limit = 99
-
-age = "How old are you ?"
-
-if int(age) > limit:
-  print("Wow, you're a living fossil !")
-else:
-  print("Oh yeah, you're alright.")
-  
+for i in randlist:
+  listx5.append(i*5)
+print("multiples list : ", listx5)
 ```
 
 
 
-## Take home :
+## Homework answers
 
-- indents !
+- Count pair and odd values
 
-- ":" after ifs and elses, rather than brackets like in R
+```{python}
+#| echo: true
+npairs = 0
+nodd = 0
+for i in randlist:
+  if i%2 == 1:
+    npairs += 1
+  else:
+    nodd += 1
+print("randlist has ", npairs, "pair numbers and ", nodd, "odd numbers.")
+```
 
-- code execution by individual cells (on Colab/Jupyter) or entire script (Spyder, etc).
-
-- python errors are usually quite precise: **read the error messages carefully**. Otherwise, absolute rule is: the internet has looooaaads of python forums, help pages, tutorials, bug fixes. A very active community.
 
 
+## Functions
 
+## Errors and exceptions
 
+## Importing data
+
+-   From local computer onto colab
+
+## Pandas, matplotlib
 
