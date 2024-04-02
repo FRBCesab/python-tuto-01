@@ -9,19 +9,25 @@ jupyter: python3
 
 ## Setup
 
-::: r-fit-text
+
 Setting up a local python environment is a pain...
 
-![Source: http://xkcd.com/1987](img/py_nightmare.png){fig-align="centre" height="50%"}
-:::
+![Source: http://xkcd.com/1987](img/py_nightmare.png){fig-align="center" width="50%"}
+
 
 ## Setup
 
 Easiest way : install Anaconda Navigator...
 
-Editors: - IDLE = default - Anaconda \> Spyder, PyCharm, ... and RStudio too! File \> New file \> Python script
+Editors: 
 
-![Python prompt: \>\>\>](img/py_in_RStudio.png){height="50%"}
+- IDLE = default 
+
+- Anaconda \> Spyder, PyCharm, ... 
+
+and RStudio too! File \> New file \> Python script
+
+![Python prompt: `>>>`](img/py_in_RStudio.png){height="50%"}
 
 ## Setup
 
@@ -39,13 +45,13 @@ Same programming rules:
 
 `>>> a=50` - use `+=` to increment/concatenate
 
-`>>> a += a + 1`
+`>>> a +=  1`
 
 -   a list = multiple values in a variable. Each value is identified by its **key** (name).
 
 `>>> mylist = ['tic', 'tac', 'toc']`
 
--   in Python, index starts at 0, not 1 (so NOT like in R): in mylist, the key for value toto is 0.
+-   in Python, index starts at 0, not 1 (so NOT like in R): in mylist, the key for value 'tic' is 0.
 
 `>>> print(mylist[2])`
 
@@ -58,23 +64,26 @@ A common object to manipulate in Python are **dictionaries**: they're a pair of 
 
 `>>> mydico = dict(Lastname = "Petit", Firstname = "Cathleen", Pronounciation = "Kétline")`
 
-Same conditional rules as in R: if, else, elsif... --\> NO !! it's **elif** (but who uses those..?!)
+Same conditional rules as in R: `if`, `else`, `elseif`... (--\> NO !! it's **elif** instead of `elseif`... but who uses those anyways ?)
 
-**Arithmetic operators :** the usual, but also: `%`, which means 'modulo', is a multiple of. Returns 1 or 0 (True/False).
+**Arithmetic operators :** the usual, but also: `%`, which means 'modulo' = is a multiple of. Returns 1 or 0 (True/False).
 
-**Logical operators :** `==, !=, >, >=, ...`
-
-
-### For loops:
-
-Synthax:
+**Logical operators :** `==`, `!=`, `>`, `>=` ...
 :::
 
+
+## For loops
+
+Syntax:
+
 ::: {style="font-size: 100%;"}
-``` python
+
+```{python}
+#| echo: true
+#| eval: false
 string = 'Hello sunshine !'
 for a in string :
-  print (a)
+  print(a)
 ```
 
 Try it !
@@ -101,7 +110,7 @@ Try it !
 
 `list[a:b]` → show values from a to b
 
-`x.extend(y`)\` → concatenate lists x and y
+`x.extend(y)` → concatenate lists x and y
 
 `str.find(string)` → counts occurrences of str in string
 
@@ -138,12 +147,12 @@ Write a script to ask the user their age, and give different answers depending o
 
 ## Answer:
 
-``` python
+```python
 limit = 99
 
-age = input("How old are you ?")
+age = input('How old are you ?')
 
-if int(age) > limit:
+if float(age) > limit:
   print("Wow, you're a living fossil !")
 else:
   print("Oh yeah, you're alright.")

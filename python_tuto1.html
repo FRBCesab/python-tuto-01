@@ -398,24 +398,22 @@
 </section>
 <section id="setup" class="slide level2">
 <h2>Setup</h2>
-<div class="r-fit-text">
 <p>Setting up a local python environment is a pain…</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/py_nightmare.png" style="height:50.0%"></p>
-<figcaption>Source: http://xkcd.com/1987</figcaption>
-</figure>
-</div>
-</div>
-</section>
+
+<img data-src="img/py_nightmare.png" style="width:50.0%" class="r-stretch quarto-figure-center"><p class="caption">Source: http://xkcd.com/1987</p></section>
 <section id="setup-1" class="slide level2">
 <h2>Setup</h2>
 <p>Easiest way : install Anaconda Navigator…</p>
-<p>Editors: - IDLE = default - Anaconda &gt; Spyder, PyCharm, … and RStudio too! File &gt; New file &gt; Python script</p>
+<p>Editors:</p>
+<ul>
+<li><p>IDLE = default</p></li>
+<li><p>Anaconda &gt; Spyder, PyCharm, …</p></li>
+</ul>
+<p>and RStudio too! File &gt; New file &gt; Python script</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/py_in_RStudio.png" style="height:50.0%"></p>
-<figcaption>Python prompt: &gt;&gt;&gt;</figcaption>
+<figcaption>Python prompt: <code>&gt;&gt;&gt;</code></figcaption>
 </figure>
 </div>
 </section>
@@ -434,13 +432,13 @@
 <li>named variables:</li>
 </ul>
 <p><code>&gt;&gt;&gt; a=50</code> - use <code>+=</code> to increment/concatenate</p>
-<p><code>&gt;&gt;&gt; a += a + 1</code></p>
+<p><code>&gt;&gt;&gt; a +=  1</code></p>
 <ul>
 <li>a list = multiple values in a variable. Each value is identified by its <strong>key</strong> (name).</li>
 </ul>
 <p><code>&gt;&gt;&gt; mylist = ['tic', 'tac', 'toc']</code></p>
 <ul>
-<li>in Python, index starts at 0, not 1 (so NOT like in R): in mylist, the key for value toto is 0.</li>
+<li>in Python, index starts at 0, not 1 (so NOT like in R): in mylist, the key for value ‘tic’ is 0.</li>
 </ul>
 <p><code>&gt;&gt;&gt; print(mylist[2])</code></p>
 </section>
@@ -450,16 +448,20 @@
 <p>A common object to manipulate in Python are <strong>dictionaries</strong>: they’re a pair of KEY:Value just like in lists, but here keys in dictionaries aren’t ordered. Use <code>{}</code> to initiate them (but still use <code>[]</code> to manipulate them).</p>
 <p><code>&gt;&gt;&gt; mydico = {}</code> or</p>
 <p><code>&gt;&gt;&gt; mydico = dict(Lastname = "Petit", Firstname = "Cathleen", Pronounciation = "Kétline")</code></p>
-<p>Same conditional rules as in R: if, else, elsif… –&gt; NO !! it’s <strong>elif</strong> (but who uses those..?!)</p>
-<p><strong>Arithmetic operators :</strong> the usual, but also: <code>%</code>, which means ‘modulo’, is a multiple of. Returns 1 or 0 (True/False).</p>
-<p><strong>Logical operators :</strong> <code>==, !=, &gt;, &gt;=, ...</code></p>
-<h3 id="for-loops">For loops:</h3>
-<p>Synthax:</p>
+<p>Same conditional rules as in R: <code>if</code>, <code>else</code>, <code>elseif</code>… (–&gt; NO !! it’s <strong>elif</strong> instead of <code>elseif</code>… but who uses those anyways ?)</p>
+<p><strong>Arithmetic operators :</strong> the usual, but also: <code>%</code>, which means ‘modulo’ = is a multiple of. Returns 1 or 0 (True/False).</p>
+<p><strong>Logical operators :</strong> <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&gt;=</code> …</p>
 </div>
+</section>
+<section id="for-loops" class="slide level2">
+<h2>For loops</h2>
+<p>Syntax:</p>
 <div style="font-size: 100%;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a>string <span class="op">=</span> <span class="st">'Hello sunshine !'</span></span>
+<div id="3f88322f" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a>string <span class="op">=</span> <span class="st">'Hello sunshine !'</span></span>
 <span id="cb1-2"><a href=""></a><span class="cf">for</span> a <span class="kw">in</span> string :</span>
-<span id="cb1-3"><a href=""></a>  <span class="bu">print</span> (a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href=""></a>  <span class="bu">print</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Try it !</p>
 </div>
 </section>
@@ -475,7 +477,7 @@
 <p><code>list.count(value)</code> → counts number of occurrences of that value in the list</p>
 <p><code>list[-1]</code> → shows the last value of the list</p>
 <p><code>list[a:b]</code> → show values from a to b</p>
-<p><code>x.extend(y</code>)` → concatenate lists x and y</p>
+<p><code>x.extend(y)</code> → concatenate lists x and y</p>
 <p><code>str.find(string)</code> → counts occurrences of str in string</p>
 <p><code>str.replace(where, what)</code></p>
 <p><code>input(string)</code> → prints string and asks user for feedback (VERY INTERESTING)</p>
@@ -506,9 +508,9 @@
 <h2>Answer:</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>limit <span class="op">=</span> <span class="dv">99</span></span>
 <span id="cb2-2"><a href=""></a></span>
-<span id="cb2-3"><a href=""></a>age <span class="op">=</span> <span class="bu">input</span>(<span class="st">"How old are you ?"</span>)</span>
+<span id="cb2-3"><a href=""></a>age <span class="op">=</span> <span class="bu">input</span>(<span class="st">'How old are you ?'</span>)</span>
 <span id="cb2-4"><a href=""></a></span>
-<span id="cb2-5"><a href=""></a><span class="cf">if</span> <span class="bu">int</span>(age) <span class="op">&gt;</span> limit:</span>
+<span id="cb2-5"><a href=""></a><span class="cf">if</span> <span class="bu">float</span>(age) <span class="op">&gt;</span> limit:</span>
 <span id="cb2-6"><a href=""></a>  <span class="bu">print</span>(<span class="st">"Wow, you're a living fossil !"</span>)</span>
 <span id="cb2-7"><a href=""></a><span class="cf">else</span>:</span>
 <span id="cb2-8"><a href=""></a>  <span class="bu">print</span>(<span class="st">"Oh yeah, you're alright."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -531,7 +533,7 @@
 <li><p>the sum of all elements of the list</p></li>
 <li><p>create a new list made of 5 multiples of the original list</p></li>
 <li><p>give min and max values of the list</p></li>
-<li><p>count occurrences of pair numbers and sum them</p></li>
+<li><p>count occurrences of pair and odd numbers and sum them</p></li>
 </ul>
 </section>
 <section id="quick-games" class="slide level2">
